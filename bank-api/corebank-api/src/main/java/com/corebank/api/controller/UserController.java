@@ -15,7 +15,7 @@ import com.corebank.api.service.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/usuarios")
 public class UserController {
 
     private final UserService userService;

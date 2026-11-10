@@ -16,7 +16,7 @@ import com.corebank.api.model.entity.Transaction;
 import com.corebank.api.service.TransactionService;
 
 @RestController
-@RequestMapping("/api/transactions")
+@RequestMapping("/api/transacoes")
 public class TransactionController {
 
     private final TransactionService transactionService;
@@ -25,7 +25,7 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
-    @PostMapping("/transfer")
+    @PostMapping("/transferencia")
     public ResponseEntity<TransactionResponseDTO> transfer(@Valid @RequestBody TransactionRequestDTO request,
                                                            Authentication authentication) {
         Transaction transaction = transactionService.processTransfer(
@@ -38,7 +38,7 @@ public class TransactionController {
         return ResponseEntity.status(HttpStatus.CREATED).body(TransactionResponseDTO.from(transaction));
     }
 
-    @PostMapping("/deposit")
+    @PostMapping("/deposito")
     public ResponseEntity<TransactionResponseDTO> deposit(@Valid @RequestBody DepositRequestDTO request,
                                                           Authentication authentication) {
         Transaction transaction = transactionService.processDeposit(
