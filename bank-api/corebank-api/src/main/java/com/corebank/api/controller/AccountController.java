@@ -17,7 +17,7 @@ import com.corebank.api.service.AccountService;
 import com.corebank.api.service.TransactionService;
 
 @RestController
-@RequestMapping("/api/accounts")
+@RequestMapping("/api/contas")
 public class AccountController {
 
     private final AccountService accountService;

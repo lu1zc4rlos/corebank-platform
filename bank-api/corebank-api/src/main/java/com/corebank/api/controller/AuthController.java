@@ -26,7 +26,7 @@ import com.corebank.api.service.UserService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/autenticacao")
 public class AuthController {
 
     private static final int MINIMUM_AGE = 18;
