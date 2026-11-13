@@ -64,7 +64,7 @@ public class SecurityConfig {
                         .requestMatchers("/actuator/health").permitAll()
                         .requestMatchers("/error").permitAll()
                         // Rotas públicas: login e cadastro de usuário
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/autenticacao/**").permitAll()
                         // Todo o resto (contas, transações...) exige token JWT válido
                         .anyRequest().authenticated()
                 )
